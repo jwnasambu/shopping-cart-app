@@ -29,10 +29,7 @@ let shopItemsData = [{
     img: "/images/img-4.jpg" 
 }]
 
-let basket = [{
-    id: "ojghfbvf",
-    item: 1
-}];
+let basket = JSON.parse(localStorage.getItem("data")) || [];
 let generateShop = () => {
     return (shop.innerHTML = shopItemsData.map((x) => {
         let { id, name, price, desc, img } = x;
@@ -100,3 +97,5 @@ let calculation = () => {
     let cartIcon = document.getElementById("cartAmount");
     cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0)
 };
+
+calculation();
