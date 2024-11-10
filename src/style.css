@@ -140,3 +140,8 @@ a {
 .title-price-x {
     display: flex;
 }
+
+.text-center{
+    text-align: center;
+    margin-bottom: 20px;
+}
