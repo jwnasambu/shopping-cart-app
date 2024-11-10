@@ -13,7 +13,11 @@ calculation();
 
 let generateCartItems = () => {
     if (basket.length !== 0) {
-        console.log("basket is not empty");
+    }
+    else {
+    ShoppingCart.innerHTML = ``;
+    label.innerHTML = `
+        <h2>Cart is Empty</h2>
     }
     else{
     ShoppingCart.innerHTML = ``;
