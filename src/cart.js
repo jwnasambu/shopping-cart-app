@@ -9,11 +9,38 @@ let calculation = () => {
     cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0)
 };
 
-calculation();
+calculation(); 
 
 let generateCartItems = () => {
   if (basket.length !== 0) {
-    return
+    return (ShoppingCart.innerHTML = basket.map((x) => { 
+      console.log(x); 
+      let { id, item } = x;
+      let search = shopItemsData.find((y) => y.id === id) || [];
+      return `
+     <div class="cart-item">
+    <img width="100" src="${search.img}" alt="" />
+    <div class="details">
+        <div class="title-price-x">
+            <h4 class="title-price">
+                <p>${search.name}</p>
+                <p class="cart-item-price" >$ ${search.price}</p>
+            </h4>
+             
+            <i class="bi bi-x-lg"></i>
+        </div>
+        <div class="cart-buttons"></div>
+    </div>
+</div>
+
+
+        </div>
+           
+           <h3></h3>
+      </div>
+      `;
+    })
+    .join(""));
 } else {
     ShoppingCart.innerHTML = ``;
     label.innerHTML = `

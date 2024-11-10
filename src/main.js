@@ -14,7 +14,9 @@ let generateShop = () => {
                     <h2>$ ${price}</h2>
                     <div class="button">
                         <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-                        <div id=${id} class="quantity">0</div>
+                        <div id=${id} class="quantity">
+                        ${search.item === undefined ? 0 : search.item}
+                        </div>
                         <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
                     </div>
                 </div>
