@@ -133,15 +133,36 @@ a {
 
 .cart-item {
     border: 2px solid #212529;
-    border-radius: 50px;
+    border-radius: 5px;
     display: flex;
 }
 
 .title-price-x {
+    width: 195px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .text-center{
     text-align: center;
     margin-bottom: 20px;
+}
+
+.bi-x-lg {
+    color: red;
+    font-weight: bold;
+}
+
+.title-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-price {
+   background-color:  #212529;
+   color: white;
+   border-radius: 4px;
+   padding: 3px 6px;
 }
